@@ -16,7 +16,7 @@
 		30A5D2941C0D3A0F005AE41B /* PopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A5D2931C0D3A0F005AE41B /* PopTests.swift */; };
 		30B0639A1C0D5F4100004DA3 /* BubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B063991C0D5F4100004DA3 /* BubbleTableViewCell.swift */; };
 		30C050491C10FDBE00D517C4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C050481C10FDBE00D517C4 /* Bolts.framework */; };
-		30C0504B1C10FDC600D517C4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C0504A1C10FDC600D517C4 /* Parse.framework */; };
+		30C0504B1C10FDC600D517C4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C0504A1C10FDC600D517C4 /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		30C050581C10FE3100D517C4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C0504C1C10FE3100D517C4 /* Accounts.framework */; };
 		30C050591C10FE3100D517C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C0504D1C10FE3100D517C4 /* AudioToolbox.framework */; };
 		30C0505A1C10FE3100D517C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C0504E1C10FE3100D517C4 /* CFNetwork.framework */; };
@@ -29,6 +29,10 @@
 		30C050611C10FE3100D517C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C050551C10FE3100D517C4 /* Social.framework */; };
 		30C050621C10FE3100D517C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C050561C10FE3100D517C4 /* StoreKit.framework */; };
 		30C050631C10FE3100D517C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C050571C10FE3100D517C4 /* SystemConfiguration.framework */; };
+		30C050651C113F2E00D517C4 /* StreamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C050641C113F2E00D517C4 /* StreamTableViewController.swift */; };
+		30C050671C1143AC00D517C4 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C050661C1143AC00D517C4 /* Bubble.swift */; };
+		30C050681C1143AC00D517C4 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C050661C1143AC00D517C4 /* Bubble.swift */; };
+		30C0506A1C1158EB00D517C4 /* MyBubblesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C050691C1158EB00D517C4 /* MyBubblesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,9 @@
 		30C050551C10FE3100D517C4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30C050561C10FE3100D517C4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		30C050571C10FE3100D517C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		30C050641C113F2E00D517C4 /* StreamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTableViewController.swift; sourceTree = "<group>"; };
+		30C050661C1143AC00D517C4 /* Bubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		30C050691C1158EB00D517C4 /* MyBubblesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBubblesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +126,9 @@
 				30C050561C10FE3100D517C4 /* StoreKit.framework */,
 				30C050571C10FE3100D517C4 /* SystemConfiguration.framework */,
 				30B063991C0D5F4100004DA3 /* BubbleTableViewCell.swift */,
+				30C050641C113F2E00D517C4 /* StreamTableViewController.swift */,
+				30C050691C1158EB00D517C4 /* MyBubblesTableViewController.swift */,
+				30C050661C1143AC00D517C4 /* Bubble.swift */,
 				30A5D27B1C0D3A0F005AE41B /* Pop */,
 				30A5D2921C0D3A0F005AE41B /* PopTests */,
 				30A5D27A1C0D3A0F005AE41B /* Products */,
@@ -210,6 +220,11 @@
 				TargetAttributes = {
 					30A5D2781C0D3A0F005AE41B = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					30A5D28E1C0D3A0F005AE41B = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -262,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A5D2811C0D3A0F005AE41B /* SecondViewController.swift in Sources */,
+				30C050671C1143AC00D517C4 /* Bubble.swift in Sources */,
 				30A5D27D1C0D3A0F005AE41B /* AppDelegate.swift in Sources */,
+				30C050651C113F2E00D517C4 /* StreamTableViewController.swift in Sources */,
+				30C0506A1C1158EB00D517C4 /* MyBubblesTableViewController.swift in Sources */,
 				30A5D27F1C0D3A0F005AE41B /* FirstViewController.swift in Sources */,
 				30B0639A1C0D5F4100004DA3 /* BubbleTableViewCell.swift in Sources */,
 			);
@@ -273,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A5D2941C0D3A0F005AE41B /* PopTests.swift in Sources */,
+				30C050681C1143AC00D517C4 /* Bubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
