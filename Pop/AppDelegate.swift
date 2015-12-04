@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+        
         // Override point for customization after application launch.
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("gpOMfSfcbgFopdGkonR2nkOXayI0onB1X0suXEZ6",clientKey: "34Am5KuVS6dqR8LC3NDzeq0PWZB9VVqtZGSsVvgG")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         return true
+    }
+    
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        print("Complete")
+        completionHandler(UIBackgroundFetchResult.NewData)
+        
+        //getData()
+    }
+    
+    func getData() -> Void {
+        // parse request
+        //UIApplication.sharedApplication().scheduledLocalNotifications(localNotification)
     }
 
     func applicationWillResignActive(application: UIApplication) {
